@@ -56,6 +56,8 @@
         },
         
         init: function () {
+            console.time('before product view')
+            console.log(Date.now());
             this.initMultiTab();
             this.initMultiTabMobile();
             this.productBlockInfiniteScroll();
@@ -112,9 +114,13 @@
             if($body.hasClass('template-cart')) {
                 this.updateGiftWrapper();
             }
+            console.timeEnd('before product view')
+            console.log(Date.now())
             
             if($body.hasClass('template-product')) {
+                console.time('product init')
                 this.initProductView($('.halo-productView'));
+                console.timeEnd('product init')
                 this.initProductBundle();
                 this.articleGallery();
                 this.toggleSidebarMobile(); 
