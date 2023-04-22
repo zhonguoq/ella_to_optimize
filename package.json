@@ -1,0 +1,15 @@
+{
+  "name": "ella_to_optimize",
+  "version": "1.0.0",
+  "description": "The zegamarket shopify website repo copy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "node node_modules/@wbelk/shopify-simple-minify/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wbelk/shopify-simple-minify": "^1.2.6"
+  }
+}
