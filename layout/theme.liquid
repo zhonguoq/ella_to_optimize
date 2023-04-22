@@ -1,5 +1,5 @@
-<!doctype html>
-{%- liquid
+<!doctype html>  
+{%- liquid  
     if settings.list_iso_rtl != blank
         assign locale_iso_code = request.locale.iso_code
         assign arr_list_rtl = settings.list_iso_rtl | remove:' ' | split:',' 
