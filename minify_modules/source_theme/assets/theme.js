@@ -3935,7 +3935,7 @@
                 if($scope.hasClass('layout-1') || $scope.hasClass('layout-2')){
                     console.log('layout 1 and layout2 called')
                     sliderFor.on('init',(event, slick) => {
-                        console.timeend('productImageGallery')
+                        console.timeEnd('productImageGallery')
                         sliderFor.find('.animated-loading').removeClass('animated-loading');
                     });
 
