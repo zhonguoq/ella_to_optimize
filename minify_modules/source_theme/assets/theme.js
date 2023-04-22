@@ -3933,6 +3933,7 @@
                 }
 
                 if($scope.hasClass('layout-1') || $scope.hasClass('layout-2')){
+                    console.log('layout 1 and layout2 called')
                     sliderFor.on('init',(event, slick) => {
                         console.timeend('productImageGallery')
                         sliderFor.find('.animated-loading').removeClass('animated-loading');
@@ -3981,6 +3982,7 @@
                         ]
                     });
                 } else if($scope.hasClass('layout-3')){
+                    console.log(`layout 3 called`)
                     sliderFor.on('init',(event, slick) => {
                         sliderFor.find('.animated-loading').removeClass('animated-loading');
                     });
