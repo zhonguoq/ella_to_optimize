@@ -17,6 +17,7 @@
     });
 
     window.onload = function() { 
+        console.log(`window onload ${Date.now()}`)
         halo.init();
     }
 
