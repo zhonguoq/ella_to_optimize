@@ -3787,6 +3787,7 @@
         },
 
         productImageGallery: function($scope) {
+            console.time('productImageGallery')
             var sliderNav = $scope.find('.productView-nav'),
                 sliderFor = $scope.find('.productView-for:not(".mobile")'),
                 sliderForMobile = $scope.find('.productView-for.mobile');
@@ -3933,6 +3934,7 @@
 
                 if($scope.hasClass('layout-1') || $scope.hasClass('layout-2')){
                     sliderFor.on('init',(event, slick) => {
+                        console.time(`productImageGallery ${$scope.data('product-id')}`)
                         sliderFor.find('.animated-loading').removeClass('animated-loading');
                     });
 
