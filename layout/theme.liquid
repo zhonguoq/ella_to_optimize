@@ -1,4 +1,4 @@
-<!doctype html>  a
+<!doctype html>
 {%- liquid  
     if settings.list_iso_rtl != blank
         assign locale_iso_code = request.locale.iso_code
@@ -12,6 +12,7 @@
 -%}
 <html class="no-js" lang="{{ request.locale.iso_code }}"{% if settings.enable_layout_rtl and enable_iso_rtl %} dir="rtl"{% endif %}>
     <head>
+       <!-- a -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
