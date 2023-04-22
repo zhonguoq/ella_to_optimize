@@ -3985,7 +3985,7 @@
                     console.log(`layout 3 called`)
                     console.time('layout-3')
                     sliderFor.on('init',(event, slick) => {
-                        console.timeend('layout-3')
+                        console.timeEnd('layout-3')
                         sliderFor.find('.animated-loading').removeClass('animated-loading');
                     });
 
