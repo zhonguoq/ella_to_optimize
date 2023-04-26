@@ -18,6 +18,7 @@
 
     window.onload = function() { 
         console.log(`window onload ${Date.now()}`)
+                    halo.init();
     }
     window.addEventListener("DOMContentLoaded", (event) => {
       console.log("DOM fully loaded and parsed");
