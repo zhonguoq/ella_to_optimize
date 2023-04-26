@@ -22,7 +22,7 @@
     }
     window.addEventListener("DOMContentLoaded", (event) => {
       console.log("DOM fully loaded and parsed");
-              halo.init();
+              halo.init_product();
     });
 
     var halo = {
@@ -59,6 +59,22 @@
                 calculateTranslateYHeight: this.calculateTranslateYHeight,
             };
         },
+
+        init_product:function(){
+          if($body.hasClass('template-product')) {
+                console.time('product init')
+                this.initProductView($('.halo-productView'));
+                console.timeEnd('product init')
+                this.initProductBundle();
+                this.articleGallery();
+                this.toggleSidebarMobile(); 
+                this.initCollapseSidebarBlock();    
+                this.initCategoryActive();
+                this.initProductReviewSection();
+                this.productCustomInformation();
+                this.iconZoomClickMobile();
+            }
+        }
         
         init: function () {
             console.time('before product view')
@@ -121,20 +137,6 @@
             }
             console.timeEnd('before product view')
             console.log(Date.now())
-            
-            if($body.hasClass('template-product')) {
-                console.time('product init')
-                this.initProductView($('.halo-productView'));
-                console.timeEnd('product init')
-                this.initProductBundle();
-                this.articleGallery();
-                this.toggleSidebarMobile(); 
-                this.initCollapseSidebarBlock();    
-                this.initCategoryActive();
-                this.initProductReviewSection();
-                this.productCustomInformation();
-                this.iconZoomClickMobile();
-            }
 
             if($body.hasClass('template-blog') || $body.hasClass('template-article')) {
                 this.initCollapseSidebarBlock();
