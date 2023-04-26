@@ -74,7 +74,7 @@
                 this.productCustomInformation();
                 this.iconZoomClickMobile();
             }
-        }
+        },
         
         init: function () {
             console.time('before product view')
